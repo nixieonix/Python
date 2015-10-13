@@ -4,7 +4,7 @@ from random import randint
 boatField = []
 
 for i in range(0, 5):
-	boatField.append(["0"] * 5)
+	boatField.append(["O"] * 5)
 
 def print_board(boatField):
 	for row in boatField:
@@ -16,7 +16,8 @@ random_col = randint(0, len(boatField[0]) - 1)
 print "Let's play battle ship!"
 print print_board(boatField)
 
-for turn in range(4):
+
+while boatField[random_row][random_col] != "X":
 	guess_row = int(raw_input("Guess Row: "))
 	guess_col = int (raw_input("Guess Col: "))
 
@@ -26,21 +27,19 @@ for turn in range(4):
 	else:
 		if guess_row not in range(5) or guess_col not in range(5):
 			print "Oops, that's not even in the ocean."
-
 		elif boatField[guess_row][guess_col] == "X":
 			print "You already tried this one!"
-
 		else:
 			print "You missed my battleship!"
 			boatField[guess_row][guess_col] = "X"
-	
-	print "Turn: ", turn + 1
+
 	print_board(boatField)
 	
-	if turn == 3:
+	"""if turn == 3:
 		print "Game Over"
 		print random_row
 		print random_col
+	"""
 
 """
 from random import randint
