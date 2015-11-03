@@ -1,0 +1,49 @@
+{% extends "index.html" %}
+{% block content %}
+<div  class="content">
+    <div class="row">
+        <h1 class="text-center">Contacts</h1>
+        <div class="col-md-5 contact">
+            <address>
+                <strong>Nika Grabnar</strong><br>
+                795 Folsom Ave, Suite 600<br>
+                San Francisco, CA 94107<br>
+                <abbr title="Phone">P:</abbr> (123) 456-7890
+                <a href="mailto:#">nika.grabnar@gmail.com</a>
+            </address>
+            <div class="form">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email:</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="pwd">Password:</label>
+                        <div class="col-sm-10">          
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                        </div>
+                    </div>
+                    <div class="form-group">        
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label><input type="checkbox"> Remember me</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">        
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-5 map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22152.564367846076!2d14.50903315!3d46.0496911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652d633629a6c3%3A0x456af8c761337564!2sCenter%2C+1000!5e0!3m2!1ssl!2ssi!4v1442398575229" width="500" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
